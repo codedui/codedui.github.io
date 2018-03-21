@@ -1,0 +1,670 @@
+/* ======================= */
+/*       Basci Setup       */
+/* ======================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    background-color: #fff;
+    color: #323545;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px; /* My browser default font size: 20px */
+    font-weight: 300;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+.clearfix:after {
+    content: "";
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+
+/* ======================= */
+/*   Reusable Components   */
+/* ======================= */
+
+.row {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+section {
+    padding: 80px 0;
+}
+
+.box {
+    padding: 1%;
+}
+
+/* ------- Headings ------- */
+h1,
+h2,
+h3 {
+    
+    text-transform: uppercase;
+}
+
+h1 {
+    margin: 0;
+    margin-bottom: 20px;
+    color: #e63946;
+    font-size: 3.2rem;
+    word-spacing: 4px;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+h4{
+    word-spacing: 2px;
+    letter-spacing: 1px;
+    font-weight: 300;
+    color: #e63946;
+    margin-bottom: 20px;
+    font-size: 2.2rem;
+}
+
+h2 {
+    font-size: 1.7rem;
+    word-spacing: 2px;
+    text-align: center;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+
+h2:after {
+    display: block;
+    height: 2px;
+    background-color: #e63946;
+    content: "";
+    width: 100px;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+h3 {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+/* ------- Paragraphs ------- */
+.long-copy {
+    line-height: 1.45;
+    width: 70%;
+    margin-left: 15%;
+}
+
+.box p {
+    font-size: .88rem;
+    line-height: 1.45;
+}
+
+/* ------- Icons ------- */
+.icon-big {
+    font-size: 3.3rem;
+    display: block;
+    color: #e63946;
+    margin-bottom: 10px;
+}
+
+.icon-small {
+    display: inline-block;
+    width: 30px;
+    text-align: center;
+    color: #e63946;
+    font-size: 1.2rem;
+    margin-right: 10px;
+
+    /* Secrets to align text and icons */
+    line-height: 1.2;
+    vertical-align: middle;
+    margin-top: -5px;
+}
+
+/* ------- Links ------- */
+a:link,
+a:visited {
+    color: #e63946;
+    text-decoration: none;
+    padding-bottom: 1px;
+    border-bottom: 1px solid #e78e22;
+    -webkit-transition: border-bottom .2s, color .2s;
+    transition: border-bottom .2s, color .2s;
+}
+
+a:hover,
+a:active {
+    color: #555;
+    border-bottom: 1px solid transparent;
+}
+
+/* ------- Buttons ------- */
+/* a:link for link in the normal state */
+.btn:link,
+.btn:visited,
+input[type="submit"] {
+    /* Set common button style */
+    display: inline-block;
+    padding: 10px 30px;
+    font-weight: 300;
+    text-decoration: none;
+    border-radius: 200px;
+
+    -webkit-transition: background-color .2s,
+                border .2s,
+                color .2s;
+
+    transition: background-color .2s,
+                border .2s,
+                color .2s;
+}
+
+.btn-full:link,
+.btn-full:visited,
+input[type="submit"] {
+    /* FlatUI color */
+    background-color: #e63946;
+
+    /* Due to "box-sizing: border-box;", so add border to make
+    the .btn-full has same height as the .btn-ghost*/
+    border: 1px solid #e63946;
+    color: #fff;
+
+    margin-right: 15px;
+}
+
+.btn-ghost:link,
+.btn-ghost:visited {
+    border: 1px solid #e63946;
+    color: #e63946;
+}
+
+.btn:hover,
+.btn:active,
+input[type="submit"]:hover,
+input[type="submit"]:active {
+    background-color: #e11c2b;
+}
+
+.btn-full:hover,
+.btn-full:active {
+    border: 1px solid #e11c2b;
+}
+
+.btn-ghost:hover,
+.btn-ghost:active {
+    border: 1px solid #e11c2b;
+    color: #fff;
+}
+
+
+/* ======================= */
+/*   Section 0 - Header    */
+/* ======================= */
+
+.index-page {
+    background-color: #f6f6f6;
+
+    /* Make image as high as the browser viewport */
+    height: 100vh;
+}
+
+.hero-text-box {
+    /* Make a vertically, horizontally centered box */
+    position: absolute;
+    width: 1140px;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.logo {
+    height: 80px;
+    width: auto;
+    float: left;
+    margin-top: 1rem;
+}
+
+.logo-black {
+    display: none;
+    height: 50px;
+    width: auto;
+    float: left;
+    margin: .25rem 0;
+}
+
+/* ------- Main Navigation ------- */
+.main-nav {
+    float: right;
+    list-style: none;
+    margin-top: 2.7rem;
+}
+
+.main-nav li {
+    display: inline-block;
+    margin-left: 40px;
+}
+
+.main-nav li a:link,
+.main-nav li a:visited {
+    padding: 8px 0;
+    color: #e63946;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: .9rem;
+    border-bottom: 2px solid transparent;
+    -webkit-transition: border-bottom .2s;
+    transition: border-bottom .2s;
+}
+
+.main-nav li a:hover,
+.main-nav li a:active {
+    border-bottom: 2px solid #e63946;
+}
+
+/* ------- Mobile Navigation (Responsive) ------- */
+.mobile-nav-icon {
+    float: right;
+    margin-top: 30px;
+    cursor: pointer;
+    display: none;
+}
+
+.mobile-nav-icon i {
+    font-size: 1.8rem;
+    color: #e63946;
+}
+
+
+/* ------- Sticky Navigation ------- */
+.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, .98);
+    box-shadow: 0 2px 2px #efefef;
+    z-index: 999;
+}
+
+.sticky .main-nav {
+    margin-top: .9rem;
+}
+
+.sticky .main-nav li a:link,
+.sticky .main-nav li a:visited {
+    padding: 16px 0;
+    color: #555;
+}
+
+.sticky .logo {
+    display: none;
+}
+.sticky .logo-black {
+    display: block;
+}
+
+
+/* ======================= */
+/*  Section 1 - Features   */
+/* ======================= */
+
+.section-features .long-copy {
+    margin-bottom: 30px;
+}
+.box h3{
+    text-align: center;
+}
+
+.box img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+/* ======================= */
+/*  Section 2 - Newsleter  */
+/* ======================= */
+
+.section-newsletter{
+    background-color: #323545;
+    color: #f6f6f6;
+    padding: 30px 0;
+}
+.section-newsletter p{
+    padding: 5px 0;
+    text-align: center;
+}
+
+/* ======================= */
+/*  Section 3 - Tweet  */
+/* ======================= */
+
+.tweet-para{
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+/* ======================================= */
+/*        Section 4 - Contact Form         */
+/* ======================================= */
+
+
+.section-form{
+    background-color: #f6f6f6;
+}
+
+.contact-text{
+    text-align: center;
+}
+input::placeholder{
+    color: #e63946;
+    font-weight: 500;
+}
+.contact-form {
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+    width: 100%;
+    padding: 7px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+
+textarea {
+    height: 100px;
+}
+
+input[type="checkbox"] {
+    margin: 10px 5px  10px 0;
+}
+
+*:focus {
+    outline: none;
+}
+
+.map-box {
+    width: 100%;
+    height: 560px;
+    position: relative;
+}
+
+.map {
+    width: 100%;
+    height: 560px;
+    position: relative;
+    z-index: 0;
+}
+
+.form-box {
+    width: 50%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: rgba(255,255,255,.8);
+    z-index: 10;
+    height: 560px;
+    padding-top: 40px;
+}
+
+
+/* ======================================= */
+/*            Section 8 - Footer           */
+/* ======================================= */
+
+footer {
+    background-color: #323545;
+    padding: 50px;
+    font-size: .8rem;
+}
+
+.footer-nav {
+    list-style: none;
+    float: left;
+}
+
+.social-links {
+    list-style: none;
+    float: right;
+    
+}
+
+.footer-nav li,
+.social-links li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.footer-nav li:last-child,
+.social-links li:last-child {
+    margin-right: 0;
+}
+
+.footer-nav li a:link,
+.footer-nav li a:visited,
+.social-links li a:link,
+.social-links li a:visited {
+    text-decoration: none;
+    border: 0;
+    color: #888;
+    -webkit-transition: color .2s;
+    transition: color .2s;
+}
+
+.footer-nav li a:hover,
+.footer-nav li a:active {
+    color: #f6f6f6;
+}
+
+.social-links li a {
+    font-size: 1.2rem;
+}
+
+.ion-social-twitter,
+.ion-social-instagram {
+    -webkit-transition: color .2s;
+    transition: color .2s;
+}
+
+
+
+.ion-social-twitter:hover {
+    color: #55acee;
+}
+
+
+
+.ion-social-instagram:hover {
+    color: #125688;
+}
+
+footer p {
+    color: #e63946;
+    text-align: center;
+    margin-top: 20px;
+    letter-spacing: 2px;
+    
+}
+
+
+/* ======================================= */
+/*            Section 5 - Blog          */
+/* ======================================= */
+
+.blog-container{
+    margin-top: 40px;
+    background-color: #fff;
+    box-shadow: 4.7px 6.5px 34px 0 rgba(0,0,0,.1);
+    
+}
+
+
+
+
+
+/* ======================================= */
+/*       Section 6 - About the author      */
+/* ======================================= */
+
+.about-para{
+    line-height: 1.45;
+    font-size: 130%;
+    text-align: center;
+    font-weight: 300;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+
+
+/*-----Skills Bar--------*/
+.skills-container {
+	box-sizing: border-box;
+    width: 100%;
+    background-color: #ddd;
+    margin-bottom: 50px;
+}
+
+.skills {
+	box-sizing: border-box;
+    text-align: left;
+    padding-left: 20px;
+    line-height: 40px;
+    color: #f6f6f6;
+    
+}
+
+.html {
+  width: 90%;
+  background-color: #e63946;
+    
+}
+.js{
+    width: 70%;
+    background-color: #e63946;
+}
+.other{
+    width: 80%;
+    background-color: #e63946;
+}
+.ps{
+    width: 70%;
+    background-color: blueviolet;
+}
+.ai{
+    width: 82%;
+    background-color: blueviolet;
+}
+.xd{
+    width: 67%;
+    background-color: blueviolet;
+}
+
+.ui{
+    width: 50%;
+    background-color: blueviolet;
+}
+.ux{
+    width: 45%;
+    background-color: blueviolet;
+}
+.logod{
+    width: 65%;
+    background-color: blueviolet;
+}
+
+
+
+/* ======================================= */
+/*       Section 6 - About the author      */
+/* ======================================= */
+
+.section-design-process{
+    background-color: #f6f6f6;
+    margin: 0 auto;
+}
+.design-process{
+    width: 70%;
+}
+.design-process-para{
+    line-height: 1.45;
+    font-size: 110%;
+    font-weight: 300;
+    margin: 30px auto 40px auto;
+   
+}
+h5{
+    letter-spacing: normal;
+    font-weight: 500;
+    font-size: 110%;
+    margin-top: 60px;
+}
+
+.design-process-step{
+    line-height: 1.45;
+    letter-spacing: normal;
+    font-size: 100%;
+    padding-top: 20px;
+}
+
+.section-design-process ul{
+    padding-top: 5px;
+    list-style: square;
+}
+.section-design-process ul li{
+    padding-top: 3px;
+}
+.connect{
+    margin-top: 40px;
+    text-align: center;
+}
+
+/* ======================= */
+/*   Animations on Scroll  */
+/* ======================= */
+
+.js--wp-1,
+.js--wp-2,
+.js--wp-3  {
+    opacity: 0;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+}
+
+.js--wp-4 {
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+}
+
+.js--wp-1.animated,
+.js--wp-2.animated,
+.js--wp-3.animated {
+    opacity: 1;
+}
