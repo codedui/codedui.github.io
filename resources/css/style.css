@@ -1,5 +1,5 @@
 /* ======================= */
-/*       Basci Setup       */
+/*       Basic Setup       */
 /* ======================= */
 
 * {
@@ -337,19 +337,6 @@ input[type="submit"]:active {
     margin-bottom: 15px;
 }
 
-/* ======================= */
-/*  Section 2 - Newsleter  */
-/* ======================= */
-
-.section-newsletter{
-    background-color: #323545;
-    color: #f6f6f6;
-    padding: 30px 0;
-}
-.section-newsletter p{
-    padding: 5px 0;
-    text-align: center;
-}
 
 /* ======================= */
 /*  Section 3 - Tweet  */
@@ -358,81 +345,17 @@ input[type="submit"]:active {
 .tweet-para{
     text-align: center;
 }
-
-
-
-
-
-
-
-
-/* ======================================= */
-/*        Section 4 - Contact Form         */
-/* ======================================= */
-
-
-.section-form{
+.section-twitter{
     background-color: #f6f6f6;
 }
 
-.contact-text{
-    text-align: center;
-}
-input::placeholder{
-    color: #e63946;
-    font-weight: 500;
-}
-.contact-form {
-    width: 70%;
-    margin: 0 auto;
-    margin-top: 20px;
-}
 
-input[type="text"],
-input[type="email"],
-select,
-textarea {
-    width: 100%;
-    padding: 7px;
-    border-radius: 3px;
-    border: 1px solid #ccc;
-}
 
-textarea {
-    height: 100px;
-}
 
-input[type="checkbox"] {
-    margin: 10px 5px  10px 0;
-}
 
-*:focus {
-    outline: none;
-}
 
-.map-box {
-    width: 100%;
-    height: 560px;
-    position: relative;
-}
 
-.map {
-    width: 100%;
-    height: 560px;
-    position: relative;
-    z-index: 0;
-}
 
-.form-box {
-    width: 50%;
-    position: absolute;
-    top: 0;
-    right: 0;
-    background-color: rgba(255,255,255,.8);
-    z-index: 10;
-    height: 560px;
-    padding-top: 40px;
-}
 
 
 /* ======================================= */
@@ -449,10 +372,12 @@ footer {
     list-style: none;
     float: left;
 }
-
+.right{
+    text-align: center;
+}
 .social-links {
     list-style: none;
-    float: right;
+    
     
 }
 
@@ -525,9 +450,30 @@ footer p {
     
 }
 
+.blog-box p,
+.blog-box h2{
+    color: #323545; !important
+}
 
-
-
+.blog-article-heading{
+    margin-top: 60px;
+    
+}
+.blog-article-para{
+    width: 80%;
+}
+.resources-para{
+    width: 70%;
+    font-size: .8rem;
+}
+.resources-topic{font-size:.9rem}
+.resources-topic:after{
+    display: block;
+    height: 2px;
+    background-color: #e63946;
+    content: "";
+    width: 15%;
+}
 
 /* ======================================= */
 /*       Section 6 - About the author      */
@@ -542,7 +488,10 @@ footer p {
     margin-bottom: 50px;
 }
 
-
+.about-links{
+   margin-top: 20px;
+    text-align: center;
+}
 
 /*-----Skills Bar--------*/
 .skills-container {
@@ -563,41 +512,41 @@ footer p {
 
 .html {
   width: 90%;
-  background-color: #e63946;
+  background-color: #15c39a;
     
 }
 .js{
     width: 70%;
-    background-color: #e63946;
+    background-color: #15c39a;
 }
 .other{
     width: 80%;
-    background-color: #e63946;
+    background-color: #15c39a;
 }
 .ps{
     width: 70%;
-    background-color: blueviolet;
+    background-color: #ffab00;
 }
 .ai{
     width: 82%;
-    background-color: blueviolet;
+    background-color: #ffab00;
 }
 .xd{
     width: 67%;
-    background-color: blueviolet;
+    background-color: #ffab00;
 }
 
 .ui{
     width: 50%;
-    background-color: blueviolet;
+    background-color: #7cbbf1;
 }
 .ux{
     width: 45%;
-    background-color: blueviolet;
+    background-color: #7cbbf1;
 }
 .logod{
     width: 65%;
-    background-color: blueviolet;
+    background-color: #7cbbf1;
 }
 
 
@@ -645,6 +594,96 @@ h5{
     margin-top: 40px;
     text-align: center;
 }
+
+/* ======================================= */
+/*       Section 7 - Documentation      */
+/* ======================================= */
+
+
+
+.browser-img{
+    width: auto;
+}
+.main {
+    margin-left: 60px; /* Same as the width of the sidenav */
+    font-size: 28px; /* Increased text to enable scrolling */
+    padding: 0px 10px;
+}
+
+.follow{
+    font-size: 100%;
+    margin-bottom: 10px;
+}
+.doc-code-big{
+    background-color: #f6f6f6;
+    width: 60%;
+    height: 300px;   
+    overflow-y: scroll;
+    font-size: 100%;
+}
+.doc-code-small{
+     background-color: #ddd;
+    width: 70%;
+    height: 45px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    
+}
+.doc-code-small p{
+    padding: 10px;
+}
+code{
+    font-size: 50%;
+    line-height: 1;
+}
+
+.doc-grid{
+    background-color: #f6f6f6;
+    text-align: center;
+    
+}
+.
+.doc-grid p{
+    padding: 5px;
+    font-size: 45%;
+}
+.doc-btn{
+    font-size: 60%;
+}
+.doc-btn a{
+    margin-right: 30px;
+    margin-bottom: 20px;
+}
+.contactform-container{
+    width: 40%;
+    font-size: 70%;
+    height: 10%;
+}
+h3{
+    margin-top: 30px;
+}
+p{
+    margin-bottom: 10px;
+}
+.doc-code-small p{
+    margin-bottom: 0;
+}
+/* ======================= */
+/*       Theme         */
+/* ======================= */
+
+.theme-div{
+    margin-top: 40px;
+    
+}
+.theme-img{
+    height: 200px;
+    width: auto;
+    float: left;
+    margin-right: 20px;
+}
+
+
 
 /* ======================= */
 /*   Animations on Scroll  */

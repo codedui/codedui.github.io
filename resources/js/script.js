@@ -12,15 +12,7 @@ $(document).ready(function(){
         offset: '60px;'
     });
 
-    /* Scroll Effect (on clicking buttons) */
-    /*
-       1. .animate({param}, speed, callback)
-            param(required): defined the CSS properties to be animated
-            speed(optional): 'slow', 'fast', or in ms
-            callback(optional): function to be executed after the animation completes
-       2. scrollTop() returns/sets vertical scrollbar position for the selected element
-       3. offset() returns/sets offset coordinates for the selected element, relative to the document (i.e. return top, left positions in px)
-    */
+    
     $('.js--scroll-to-plans').click(function(){
         $('html, body').animate({
             scrollTop: $('.js--section-plans').offset().top

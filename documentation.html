@@ -14,130 +14,320 @@
         <link href="https://fonts.googleapis.com/css?family=Montserrat:100,300,300i,500" rel="stylesheet">
         <link rel="stylesheet" href="resources/css/style.css">
         <link rel="stylesheet" href="resources/css/queries.css">
+        <link rel="stylesheet" href="resources/css/main-nav.css">
+        <link rel="stylesheet" href="resources/css/Coded-Toggle.css">
+        <link rel="stylesheet" href="resources/css/Coded-CheckBox.css">
+        <link rel="stylesheet" href="resources/css/Coded-RadioBtn.css">
+        <link rel="stylesheet" href="resources/css/Coded-Contactform.css">
         
         
          <title>Coded UI</title>
     </head>
     <body>
+        <header>
         <nav>
+                <div class="row doc-main">
+                    <a href="index.html"><img src="resources/img/Coded%20UI%20logo.png" class="logo" alt="Coded UI logo"></a>
+                     <a href="index.html"><img src="resources/img/text-logo.png" class="logo-black" alt="Coded UI logo"></a>
+                    <ul class="main-nav js--main-nav">
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="about.html">About the author</a></li>
+                        <li><a href="documentation.html">Documentaion</a></li>
+                        <li><a href="theme.html">Themes</a></li>
+                    </ul>
+                    <a class="mobile-nav-icon js--nav-icon">
+                        <i class="ion-navicon-round"></i>
+                    </a>
+                </div>
+            </nav>
         <div class="row">
-                <a href="index.html"><img src="resources/img/Coded%20UI%20logo.png" class="logo" alt="Coded UI logo"></a>
-                     <a href="index.html"><img src="resources/img/Coded%20UI%20logo.png" class="logo-black" alt="Coded UI logo"></a>
-                <ul class="main-nav js--main-nav">
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="about.html">About the author</a></li>
-                    <li><a href="documentation.html">Documentaion</a></li>
-                    <li><a href="theme.html">Themes</a></li>
-                </ul>
-                <a class="mobile-nav-icon js--nav-icon">
-                    <i class="ion-navicon-round"></i>
-                </a>
+        <div id="introduction">
+                    <h3>Introduction</h3>
+                    <p>Coded UI a lightweight web framework consists of huge variety of CSS modules and animation plugins</p>
+                    <h3>Get started</h3>
+                    <p>Coded UI (currently v1.0.0 beta) has few easy ways to quickly get started each one appealing to a different and use case. Read through to see what suits your particular needs.<br>
+                        Looking to quickly add Coded UI to your project?<br>
+                        Head to the <a href="https://github.com/codedui/coded-ui" target="_blank">download</a> page first
+                    </p>
+                    <h3>CSS</h3>
+                    <p>
+                        Copy-paste the stylesheet &#60;<code>link</code>&#62; into your &#60;<code>head</code>&#62;before all other stylesheets to load our CSS.
+                    </p>
+                    <h3>JS</h3>
+                    <p>Many of our components require the use of JavaScript to function. Specifically, they require jQuery, , and our own JavaScript plugins. Place the following &#60;<code>script</code>&#62; near the end of your pages, right before the closing &#60;<code>/body</code>&#62; tag, to enable them. jQuery must come first and then our JavaScript plugins</p>
+                    <h3>Add the viewport meta element</h3>
+                    <p>The viewport meta element lets you control the width and scale of the viewport on mobile browsers. Since you're building a responsive website, you want the width to be equal to the device's native width. Add this into your page's &#60;<code>head</code>&#62;</p>
+                    <h3>Browser support</h3>
+                    <p>The following table lists the versions that Coded UI is tested on. "Latest" means that it works just fine on all recent versions of that browser. With many browser moving towards a rolling release strategy, pinning down browser support to a specific version has become a little tricky in recent years. Long story short: Coded UI will work on pretty much any modern browser</p>
+                    <img class="browser-img" src="resources/img/browser.png">
+                    <h3>Community</h3>
+                    <p>Stay up to date on the development of Coded UI and reach out to the community with these helpful resources</p>
+                    <ul>
+                        <li class="follow">Follow @Coded_Ui on twitter</li>
+                        <li class="follow">Follow @Coded_UI on instagram</li>
+                    </ul>
+                </div>
+        <div id="Template">
+                  <h3>Starter template</h3>
+                  <p>Be sure to have your pages set up with the latest design and development standards. That means using an HTML5 doctype and including a viewport meta tag for proper responsive behaviors. Put it all together and your pages should look like this:</p>
+                    <div class="doc-code-big">
+                    <pre>
+                    <code>
+&lt;!doctype html&gt;
+&lt;html lang="en"&gt;
+  &lt;head&gt;
+    &lt;!-- Required meta tags --&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"&gt;
+
+    &lt;!—Coded UI CSS stylesheets--&gt;
+    &lt;link rel="stylesheet"  type=”text/css” href=””&gt;	
+    &lt;!—queries stylesheet--&gt;
+    &lt;link rel=”stylesheet” type=”text/css” href=”” 
+
+    &lt;title&gt;Hello, world!&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Hello, world!&lt;/h1&gt;
+ &lt;!-- Optional JavaScript --&gt;
+ &lt;!-- jQuery first, then Coded UI JS --&gt;
+    &lt;script src="” &gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+                    </code>
+                </pre>
+                </div>
+                    <h3>Queries starter template</h3>
+                    <p>Using media queries are a popular technique for delivering a tailored style sheet (responsive web design) to desktops, laptops, tablets, and mobile phones.</p>
+                    <div class="doc-code-big">
+                    <pre>
+                        <code>
+/* Big tablets to 1200px (width smaller than the 1140px row) */
+@media only screen and (max-width: 1200px) {
+
+}
+
+/* Small tablests to big tablets: from 768px to 1023px */
+@media only screen and (max-width: 1023px) {
+
+}
+
+/* Small phones to small tablets: from 481px to 767px */
+@media only screen and (max-width: 767px) {
+
+}
+
+/* Small phones: from 0 to 480px */
+@media only screen and (max-width: 480px) {
+
+}
+                    </code>
+                    </pre>
+                    </div>
+                </div>
+        <div id="Grid">
+                    <h3>Responsive Grid System</h3>
+                    <p>Coded UI’s grid system is responsive. The columns will re-arrange automatically depending on the screen size: </p>
+                    
+                        <div class="row">
+                            <div class="col span-1-of-2 doc-grid"><p>span-1-of-2</p></div>
+                            <div class="col span-1-of-2 doc-grid"><p>span-1-of-2</p></div>
+                        </div>
+                        <div class="row">
+                            <div class="col span-1-of-3 doc-grid"><p>span-1-of-3</p></div>
+                            <div class="col span-1-of-3 doc-grid"><p>span-1-of-3</p></div>
+                            <div class="col span-1-of-3 doc-grid"><p>span-1-of-3</p></div>
+                        </div>
+                        <div class="row">
+                            <div class="col span-1-of-4 doc-grid"><p>span-1-of-4</p></div>
+                            <div class="col span-1-of-4 doc-grid"><p>span-1-of-4</p></div>
+                            <div class="col span-1-of-4 doc-grid"><p>span-1-of-4</p></div>
+                            <div class="col span-1-of-4 doc-grid"><p>span-1-of-4</p></div>
+                        </div>
+                        <div class="row">
+                            <div class="col span-1-of-5 doc-grid"><p>span-1-of-5</p></div>
+                            <div class="col span-1-of-5 doc-grid"><p>span-1-of-5</p></div>
+                            <div class="col span-1-of-5 doc-grid"><p>span-1-of-5</p></div>
+                            <div class="col span-1-of-5 doc-grid"><p>span-1-of-5</p></div>
+                            <div class="col span-1-of-5 doc-grid"><p>span-1-of-5</p></div>
+                        </div>
+                        <div class="row">
+                            <div class="col span-1-of-6 doc-grid"><p>span-1-of-6</p></div>
+                            <div class="col span-1-of-6 doc-grid"><p>span-1-of-6</p></div>
+                            <div class="col span-1-of-6 doc-grid"><p>span-1-of-6</p></div>
+                            <div class="col span-1-of-6 doc-grid"><p>span-1-of-6</p></div>
+                            <div class="col span-1-of-6 doc-grid"><p>span-1-of-6</p></div>
+                            <div class="col span-1-of-6 doc-grid"><p>span-1-of-6</p></div>
+                        </div>
+                        <div class="row">
+                            <div class="col span-1-of-7 doc-grid"><p>span-1-of-7</p></div>
+                            <div class="col span-1-of-7 doc-grid"><p>span-1-of-7</p></div>
+                            <div class="col span-1-of-7 doc-grid"><p>span-1-of-7</p></div>
+                            <div class="col span-1-of-7 doc-grid"><p>span-1-of-7</p></div>
+                            <div class="col span-1-of-7 doc-grid"><p>span-1-of-7</p></div>
+                            <div class="col span-1-of-7 doc-grid"><p>span-1-of-7</p></div>
+                            <div class="col span-1-of-7 doc-grid"><p>span-1-of-7</p></div>
+                        </div>
+                        <div class="row">
+                            <div class="col span-1-of-8 doc-grid"><p>span-1-of-8</p></div>
+                            <div class="col span-1-of-8 doc-grid"><p>span-1-of-8</p></div>
+                            <div class="col span-1-of-8 doc-grid"><p>span-1-of-8</p></div>
+                            <div class="col span-1-of-8 doc-grid"><p>span-1-of-8</p></div>
+                            <div class="col span-1-of-8 doc-grid"><p>span-1-of-8</p></div>
+                            <div class="col span-1-of-8 doc-grid"><p>span-1-of-8</p></div>
+                            <div class="col span-1-of-8 doc-grid"><p>span-1-of-8</p></div>
+                            <div class="col span-1-of-8 doc-grid"><p>span-1-of-8</p></div>
+                        </div>
+                    
+                    <br>
+                    
+                    <div class="doc-code-small">
+                        <p>&lt;link rel="stylesheet" type="text/css" href="coded.css"&gt;</p>
+                            
+                    </div>
+                </div>
+        <div id="Menu">
+            <h3>Navigation Menu</h3>
+            <p>Minimialist navigation menu which will be customized according to your needs.</p>
+            <div class="row">      
+            <ul class="doc-nav js--main-nav">
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About the author</a></li>
+                <li><a href="documentation.html">Documentaion</a></li>
+                <li><a href="theme.html">Themes</a></li>
+            </ul>
             </div>
-        </nav>
-            
+            <div class="doc-code-small">
+                <p>&lt;link rel="stylesheet" type="text/css" href="coded-nav.css"&gt;</p>   
+            </div>
+        </div>
+        <div id="Button">
+                <h3>Button</h3>
+                    <p>Buttons are an ordinary, every-day element of interaction design. Despite this, because buttons are a vital element in creating a smooth conversational flow in web.
+                        <br>
+                            In this framework some of best User Experience (UX) practices are used in the make the experience of the user convenient and easy to use.
+                        </p>
+                    <div class="doc-btn">
+                    <a href="#" class="btn btn-ghost">btn-ghost</a>
+                    <a href="#" class="btn btn-full">btn-full</a>
+                </div>
+                    
+                    
+                    <div class="doc-code-small">
+                        <p>&lt;link rel="stylesheet" type="text/css" href="coded.css"&gt;</p>
+                            
+                    </div>
+                </div>
+        <div id="Toggle">
+                    <h3>Toggle Button</h3>
+                    <p>Toggle buttons are alternative to the radio buttons, to make the web form look different you can go with toggle buttons instead of radio button</p>
+                    <label class="switch">
+                      <input type="checkbox">
+                      <span class="slider"></span>
+                    </label>
+
+                    <label class="switch">
+                      <input type="checkbox" checked>
+                      <span class="slider"></span>
+                    </label><br><br>
+
+                    <label class="switch">
+                      <input type="checkbox">
+                      <span class="slider round"></span>
+                    </label>
+
+                    <label class="switch">
+                      <input type="checkbox" checked>
+                      <span class="slider round"></span>
+                    </label>
+
+                   
+                    <div class="doc-code-small">
+                        <p>&lt;link rel="stylesheet" type="text/css" href="coded-toggle.css"&gt;</p>
+                    </div>
+                </div>
+        <div id="Checkbox">
+                    <h3>Checkboxes</h3>
+                    <p>Checkboxes are used when there is a list of options and the user may select any number of choices, including zero, one, or several. In other words, each checkbox is independent of all other checkboxes in the list, and checking one box doesn’t uncheck the others.</p>
+                    <label class="checkbox-container">One
+                          <input type="checkbox" checked="checked">
+                          <span class="checkmark"></span>
+                        </label>
+                        <label class="checkbox-container">Two
+                          <input type="checkbox">
+                          <span class="checkmark"></span>
+                        </label>
+                        <label class="checkbox-container">Three
+                          <input type="checkbox">
+                          <span class="checkmark"></span>
+                        </label>
+                        <label class="checkbox-container">Four
+                          <input type="checkbox">
+                          <span class="checkmark"></span>
+                        </label>
+
+                    
+                    <div class="doc-code-small">
+                        <p>&lt;link rel="stylesheet" type="text/css" href="coded-checkbox.css"&gt;</p>
+                    </div>
+                </div> 
+        <div id="Radio-btn">
+                    <h3>Radio Button</h3>
+                    <p>Radio buttons are an essential element of forms. They are used when there is a list of two or more options that are mutually exclusive and the user must select exactly one choice. In other words, clicking a non-selected radio button will deselect whatever other button was previously selected in the list. </p>
+                    <label class="radio-btn-container">Male     
+                      <input type="radio" checked="checked" name="radio">
+                      <span class="checkmark"></span>
+                    </label>
+                    <label class="radio-btn-container">Female
+                      <input type="radio" name="radio">
+                      <span class="checkmark"></span>
+                    </label>
+
+                    
+                    
+                    <div class="doc-code-small">
+                        <p>&lt;link rel="stylesheet" type="text/css" href="coded-radiobtn.css"&gt;</p>
+                </div>
+                </div>
+        <div id="Contactform">
+                
+                    <h3>Contact Form</h3>
+                    <p>Web forms play a pretty important role on the web. Be it to subscribe to a newsletter, sign up for an account, or make an online purchase – there are a lot of different kind of forms out there that build the foundation for many online interactions.<br><br>
+Contact forms are among the most convenient ways to get in touch with the people behind a website – if designed with thought. </p>
+                    <div class="contactform-container">
+                      <form action="/action_page.php">
+                        <label for="fname">First Name</label>
+                        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+                        <label for="lname">Last Name</label>
+                        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+                        <label for="country">Country</label>
+                        <select id="country" name="country">
+                          <option value="australia">Australia</option>
+                          <option value="canada">Canada</option>
+                          <option value="usa">USA</option>
+                        </select>
+
+                        <label for="subject">Subject</label>
+                        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+                        <input type="submit" value="Submit">
+                      </form>
+                    </div>
+
+                    
+                     
+                    <div class="doc-code-small">
+                        <p>&lt;link rel="stylesheet" type="text/css" href="coded-contactform.css"&gt;</p>
+                </div>
+                </div>   
+        </div>
+        </header>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/Gruntfile.min.js"></script>
+        <script src="resources/js/script.js"></script>
+        <script src="vendors/js/jquery.waypoints.min.js"></script> 
+        
     </body>
 </html>
-
-<!--<style>
-
-<!DOCTYPE html>
-<html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-* {box-sizing: border-box}
-body {font-family: "Lato", sans-serif;}
-
-/* Style the tab */
-.tab {
-    float: left;
-    border: 1px solid #ccc;
-    background-color: #f1f1f1;
-    width: 30%;
-    height: 300px;
-}
-
-/* Style the buttons inside the tab */
-.tab button {
-    display: block;
-    background-color: inherit;
-    color: black;
-    padding: 22px 16px;
-    width: 100%;
-    border: none;
-    outline: none;
-    text-align: left;
-    cursor: pointer;
-    transition: 0.3s;
-    font-size: 17px;
-}
-
-/* Change background color of buttons on hover */
-.tab button:hover {
-    background-color: #ddd;
-}
-
-/* Create an active/current "tab button" class */
-.tab button.active {
-    background-color: #ccc;
-}
-
-/* Style the tab content */
-.tabcontent {
-    float: left;
-    padding: 0px 12px;
-    border: 1px solid #ccc;
-    width: 70%;
-    border-left: none;
-    height: 300px;
-}
-</style>
-</head>
-<body>
-
-<p>Click on the buttons inside the tabbed menu:</p>
-
-<div class="tab">
-  <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">London</button>
-  <button class="tablinks" onclick="openCity(event, 'Paris')">Paris</button>
-  <button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</button>
-</div>
-
-<div id="London" class="tabcontent">
-  <h3>London</h3>
-  <p>London is the capital city of England.</p>
-</div>
-
-<div id="Paris" class="tabcontent">
-  <h3>Paris</h3>
-  <p>Paris is the capital of France.</p> 
-</div>
-
-<div id="Tokyo" class="tabcontent">
-  <h3>Tokyo</h3>
-  <p>Tokyo is the capital of Japan.</p>
-</div>
-
-<script>
-function openCity(evt, cityName) {
-    var i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-    }
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
-    document.getElementById(cityName).style.display = "block";
-    evt.currentTarget.className += " active";
-}
-
-// Get the element with id="defaultOpen" and click on it
-document.getElementById("defaultOpen").click();
-</script>
-     
-</body>
-</html> 
-
-     -->
