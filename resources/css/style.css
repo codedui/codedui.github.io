@@ -461,10 +461,17 @@ footer p {
 }
 .blog-article-para{
     width: 80%;
+    margin: 0 auto;
 }
 .resources-para{
     width: 70%;
     font-size: .8rem;
+}
+.width{
+    width: 80%;
+}
+.margin{
+    margin-top: 10px;
 }
 .resources-topic{font-size:.9rem}
 .resources-topic:after{
